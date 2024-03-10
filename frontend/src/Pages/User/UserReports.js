@@ -98,7 +98,7 @@ export default function UserReports() {
     const categories = ["Meditation", "Exercise", "Sleep", "Sober"];
   
     return (
-      <div className="grid grid-cols-2 gap-4 text-white text-sm">
+      <div className="grid grid-cols-2 gap-4 text-white text-sm ">
         {categories.map((category, index) => (
           <div
             key={category}
@@ -129,17 +129,21 @@ export default function UserReports() {
   
 
   return (
-    <div className="flex flex-col items-center justify-start h-full bg-gradient-to-r from-teal-50 to-teal-200 p-8 ">
-      <h1 className="text-3xl font-bold mb-4 font-serif text-gray-500">
-        Reports
+    <div className="flex flex-col items-center justify-start  bg-gradient-to-r from-teal-50 to-teal-200 p-8 h-full">
+      
+      <h1 className="text-3xl font-bold mb-4  text-gray-500">
+        Daily Wellness Quiz Reports
       </h1>
-      <div className="flex flex-col items-start justify-between mb-4 text-gray-700 border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-blue-200 p-8  rounded-lg shadow-md">
+      <div className="">
+
+      {reportData.length > 0 && renderCharts()}
+      </div>
+      <div className="flex flex-col items-start justify-between mt-4 text-white  border-2 border-blue-200 bg-gradient-to-r from-blue-500 to-blue-300 p-3  rounded-lg shadow-md">
         <p className="text-xl">Total minutes meditated: {medidated}</p>
         <p className="text-xl">Total minutes exercised: {exercised}</p>
         <p className="text-xl">Total hours slept: {slept}</p>
         <p className="text-xl">Total sober days: {sober}</p>
       </div>
-      {reportData.length > 0 && renderCharts()}
     </div>
   );
 }

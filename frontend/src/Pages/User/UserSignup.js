@@ -11,6 +11,10 @@ const UserSignup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!email.endsWith("@nith.ac.in")) {
+      alert("Please use your college email ending with @nith.ac.in");
+      return;
+    }
     try {
       const response = await axios.post('http://localhost:3001/api/signup', { email, password, name });
       console.log('Signup successful!', response.data.message);
@@ -31,7 +35,7 @@ const UserSignup = () => {
             <input
               type="email"
               id="email"
-              placeholder="abcd@gmail.com"
+              placeholder="abcd@nith.ac.in"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required

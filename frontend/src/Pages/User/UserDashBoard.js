@@ -10,7 +10,7 @@ export default function UserDashboard() {
   const [weekday, setWeekday] = useState("");
 
   useEffect(() => {
-    setToken(Cookies.get("token")); // Move the token retrieval inside the useEffect
+    setToken(Cookies.get("token")); 
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const today = new Date().getDay();
     setWeekday(days[today]);
@@ -46,8 +46,8 @@ export default function UserDashboard() {
   return (
     <>
       {token ? (
-        <div className="flex h-screen bg-gradient-to-r from-teal-50 to-teal-200 ">
-          <div className="flex flex-col justify-center items-start p-8 w-1/2 ">
+        <div className="flex h-full bg-gradient-to-r from-teal-50 to-teal-200 ">
+          <div className="flex flex-col justify-center  items-center p-8 w-1/2 ">
             <h1 className="text-8xl font-bold text-left mb-8 ml-12 text-gray-500">
               Hello, <span className="text-9xl text-teal-500 ">{userName}</span>
             </h1>
@@ -69,7 +69,7 @@ export default function UserDashboard() {
               </Link>
             </div>
             <div className="w-96 h-56 bg-cover bg-center rounded-md shadow-md cursor-pointer transform transition duration-300 hover:scale-105">
-              <div className="w-full h-full rounded-md bg-gradient-to-t from-indigo-500 to-indigo-300 opacity-80"></div>
+              <div className="w-full h-full rounded-md bg-gradient-to-t from-teal-500 to-teal-300 opacity-80"></div>
               <Link to="/userReports" className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-2xl font-semibold">
                 Get Reports
               </Link>

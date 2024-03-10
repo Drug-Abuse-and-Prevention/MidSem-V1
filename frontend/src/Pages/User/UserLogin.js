@@ -10,6 +10,10 @@ const UserLogin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!email.endsWith("@nith.ac.in")) {
+      alert("Please use your college email ending with @nith.ac.in");
+      return;
+    }
     try {
       const response = await axios.post("http://localhost:3001/api/login", {
         email,
@@ -20,7 +24,6 @@ const UserLogin = () => {
         Cookies.set("token", response.data.token, { expires: 7 });
         navigate("/userdashboard");
         window.location.href = "/userDashboard";
-
       }
       alert(response.data.message);
     } catch (error) {
@@ -50,7 +53,7 @@ const UserLogin = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="name@gmail.com"
+                placeholder="name@nith.ac.in"
                 required
                 className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 placeholder-gray-400"
               />

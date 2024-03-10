@@ -161,7 +161,7 @@ function AnxietyQuiz() {
         </h1>
         <div className="space-y-4 ">
           <div
-            className="block cursor-pointer border-2 border-green-500  w-2/3  p-2 rounded-xl font-thin bg-green-100  "
+            className="block cursor-pointer border-2 border-green-500  w-4/5  p-2 rounded-xl font-thin bg-green-100  "
             onClick={() => handleResponseChange(0)}
           >
             <input
@@ -174,7 +174,7 @@ function AnxietyQuiz() {
             </span>
           </div>
           <div
-            className="block cursor-pointer border-2 border-blue-400 w-2/3 p-2 rounded-xl font-thin bg-blue-100 "
+            className="block cursor-pointer border-2 border-blue-400 w-4/5 p-2 rounded-xl font-thin bg-blue-100 "
             onClick={() => handleResponseChange(1)}
           >
             <input
@@ -187,7 +187,7 @@ function AnxietyQuiz() {
             </span>
           </div>
           <div
-            className="block cursor-pointer border-2 border-yellow-300 w-2/3 p-2 rounded-xl font-thin bg-yellow-100 "
+            className="block cursor-pointer border-2 border-yellow-300 w-4/5 p-2 rounded-xl font-thin bg-yellow-100 "
             onClick={() => handleResponseChange(2)}
           >
             <input
@@ -200,7 +200,7 @@ function AnxietyQuiz() {
             </span>
           </div>
           <div
-            className="block cursor-pointer border-2 border-red-400 w-2/3 p-2 rounded-xl font-thin bg-red-100"
+            className="block cursor-pointer border-2 border-red-400 w-4/5 p-2 rounded-xl font-thin bg-red-100"
             onClick={() => handleResponseChange(3)}
           >
             <input
